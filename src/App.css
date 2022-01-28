@@ -1,0 +1,13 @@
+.App {
+    position: relative;
+}
+
+.buttons {
+    position: fixed;
+    width: 50vw;
+    margin: auto;
+    bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-self: center;
+}
