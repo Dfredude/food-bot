@@ -4,10 +4,29 @@
 
 .buttons {
     position: fixed;
-    width: 50vw;
+    width: fit-content;
     margin: auto;
     bottom: 1px;
     left: 50%;
     transform: translateX(-50%);
     align-self: center;
+    background-color: #e17055;
+    border-radius: 5%;
+}
+
+.buttons ul{
+    margin: 16px;
+}
+
+.btn {
+    bottom: 5px;
+}
+
+.navigation-button{
+    float: left;
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
 }

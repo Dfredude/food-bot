@@ -1,6 +1,17 @@
 .recipe-finder {
+    float: left;
     height: 500px;
     width: 80%;
     margin:auto;
     border: black solid 3px;
+}
+
+.recipe {
+    display: grid;
+    float: left;
+}
+
+.recipe h4 {
+    text-align: center;
+    width: 300px;
 }

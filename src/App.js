@@ -7,20 +7,18 @@ import { useState } from "react";
 
 function App() {
 
-  const Service = (props) => {
-    return <>{props.component}</>
-  }
-  
-  let [current, setCurrent] = useState(<FoodFinder />);
+  let [current, setCurrent] = useState(<RecipeFinder />);
   
   return (
     <div className="App">
-      <>{current}</>
-      <section className="buttons">
-        <ModernButton onClickFunction = {() => {setCurrent(<RecipeFinder />)}} title="Find recipes" />
-        <ModernButton onClickFunction = {() => {setCurrent(<FoodFinder />)}} title="Find food" />
-        <ModernButton onClickFunction = {() => {setCurrent(<ShoppingListGenerator />)}} title="Generate your shopping list" />
-      </section>
+     {current}
+     <nav className="buttons">
+        <ul>
+          <li className="navigation-button"><ModernButton onClickFunction = {() => {setCurrent(<RecipeFinder />)}} title="Find recipes" /></li>
+          {/*<li className="navigation-button"><ModernButton onClickFunction = {() => {setCurrent(<FoodFinder />)}} title="Find food" /></li>
+          <li className="navigation-button"><ModernButton onClickFunction = {() => {setCurrent(<ShoppingListGenerator />)}} title="Generate your shopping list" /></li>*/}
+        </ul>
+      </nav>
     </div>
   );
 }
