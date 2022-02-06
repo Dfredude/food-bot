@@ -19,7 +19,8 @@ const RecipeFinder = () => {
           setRecipe(data.hits)})
     }
 
-    function searchRecipes() {
+    const searchRecipes = (e) => {
+      e.preventDefault();
       const query = document.getElementsByClassName("search-bar")[0].value
       setIsLoading(true);
       loadRecipes(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=25dc3243&app_key=12b00e88e757e23bd5111b6c378f0205`)
@@ -28,9 +29,10 @@ const RecipeFinder = () => {
     let [isLoading, setIsLoading] = useState(true)
     let [recipes, setRecipe] = useState([])
     useEffect(() => loadRecipes("https://api.edamam.com/api/recipes/v2?type=public&q=burrito&app_id=25dc3243&app_key=12b00e88e757e23bd5111b6c378f0205"), [])
+    
     if (!isLoading) return <>
       <h1>Find Awesome recipes</h1>
-      <SearchBar title="Search" onClickFunction={() => searchRecipes()}></SearchBar>
+      <SearchBar title="Search" onSubmitFunction={searchRecipes}></SearchBar>
       <div id="recipe-finder">
             {recipes.map((recipe, index) => {
               return <Recipe props={recipe.recipe} key={index}></Recipe>
@@ -39,8 +41,8 @@ const RecipeFinder = () => {
     </>
     return <>
     <h1>Find Awesome recipes</h1>
-    <SearchBar title="Search" onClickFunction={() => searchRecipes()}></SearchBar>
-    <h3>Loading...</h3>
+    <SearchBar title="Search" onSubmitFunction={searchRecipes}></SearchBar>
+    <h2>Loading...</h2>
     </>
 }
 

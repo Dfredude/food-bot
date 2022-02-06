@@ -12,10 +12,14 @@
   transition: all 0.3s linear;
 }
 
-.search-section {
+#search-form {
   margin: auto;
-  width: 50%;
+  width: 30%;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#search-form .btn {
+  width: 90%;
 }

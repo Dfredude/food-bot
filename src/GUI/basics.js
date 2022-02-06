@@ -5,9 +5,11 @@ export const ModernButton = (props) => {
 };
 
 export const SearchBar = (props) => {
-  return <section className='search-section'>
-  <label>Search food recipes</label>
-  <input className='search-bar' type="search" placeholder='  "Chicken" "Tacos"' name='q'></input>
-  <ModernButton onClickFunction= {props.onClickFunction} title={props.title}></ModernButton>
-  </section>;
+  console.log(props)
+  return <>
+  <form id='search-form' onSubmit={props.onSubmitFunction}>
+    <input className='search-bar' type="text" placeholder='  "Chicken" "Tacos"' name='q'></input>
+    <button className='btn' type="submit">{props.title}</button>
+  </form>
+  </>
 };
