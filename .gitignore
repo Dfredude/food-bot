@@ -11,6 +11,9 @@
 # production
 /build
 
+#Deployment
+food-bot-app.PublishSettings
+
 # misc
 .DS_Store
 .env.local
