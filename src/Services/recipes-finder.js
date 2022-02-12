@@ -3,11 +3,12 @@ import { SearchBar } from "../GUI/basics";
 import React, { useState, useEffect } from 'react';
 
 const Recipe = ({props}) => {
-  let {label, image, url} = props;
-  return <article className="recipe">
+  let {label, image, url} = props; 
+  if (image.search("svg")==-1) return <article className="recipe">
     <a href={url}><img src={image} alt="Oops! image not found"></img></a>
     <h4>{label}</h4>
   </article>;
+  return null
 };
 
 const RecipeFinder = () => {
