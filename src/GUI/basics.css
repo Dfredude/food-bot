@@ -14,12 +14,15 @@
 
 #search-form {
   margin: auto;
-  width: 30%;
+  width: 60%;
+  height: 40px;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 60% 40%;
+  /* grid-template-columns: repeat(2, 1fr); */
 }
 
 #search-form .btn {
   width: 90%;
+  height: 100%;
 }
