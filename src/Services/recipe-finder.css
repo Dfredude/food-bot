@@ -1,12 +1,17 @@
 #recipe-finder {
     width: 90%;
-    margin:auto;
+    display: block;
+    position: relative;
+    margin: auto;
 }
 
 .recipe {
     display: grid;
+    height: 350px;
+    grid-template-rows: auto 20%;
     float: left;
     padding: 10px;
+    margin-bottom: 30px;
 }
 
 .recipe h4 {

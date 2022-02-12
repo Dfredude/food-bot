@@ -29,7 +29,7 @@ const RecipeFinder = () => {
 
     let [isLoading, setIsLoading] = useState(true)
     let [recipes, setRecipe] = useState([])
-    useEffect(() => loadRecipes("https://api.edamam.com/api/recipes/v2?type=public&q=burrito&app_id=25dc3243&app_key=12b00e88e757e23bd5111b6c378f0205"), [])
+    useEffect(() => loadRecipes("https://api.edamam.com/api/recipes/v2?type=public&q=bug&app_id=25dc3243&app_key=12b00e88e757e23bd5111b6c378f0205"), [])
     
     if (!isLoading) return <>
       <h1>Find Awesome recipes</h1>
